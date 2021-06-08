@@ -1,156 +1,241 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap");
 
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-
-body{
-    font-family: 'Public Sans', sans-serif;
+body {
+  font-family: "Public Sans", sans-serif;
 }
 
-.container{
- display: flex;
- flex-flow: column nowrap;
+.container {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-div.banner{
-    width: 100%;
-    height: 50px;
-    background-color: orange;
+div.banner {
+  width: 100%;
+  height: 50px;
+  background-color: orange;
 }
 
-header{
- display: flex;
- flex-flow: row nowrap;
+header {
+  display: flex;
+  flex-flow: row nowrap;
 }
-    /* menu principal */
-    nav.menu-principal{
-        flex: 1 1 60%;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        margin-top: 30px;
-    }
-
-    nav.menu-principal ul{
-        width: 30%;
-        display: flex;
-        flex-flow: row wrap;
-        padding: 10px;
-    }    
-
-    nav.menu-principal ul li{
-        list-style: none;
-        flex: 1 1 auto;
-    } 
-
-    nav.menu-principal ul li a{
-        color: orange;
-        text-decoration: none;
-        font-weight: bold;
-
-    } 
-
-    nav.menu-principal ul li a:hover{
-        text-decoration: underline overline gray;
-
-    } 
-
-    /* logo */
-    div.logo{
-        flex: 1 1 40%;
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 30px;
-        padding-right: 50px;
-    }
-
-    div.logo img{
-        width: 40%;
-    }
-
-
-main{
- display: flex;
- flex-flow: row nowrap;
+/* menu principal */
+nav.menu-principal {
+  flex: 1 1 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 30px;
 }
 
-    div.imagen-sushi-inicio{
-        flex: 1 1 60%;
-    }
-     
-    div.imagen-sushi-inicio img{
-        width: 100%;
-        min-width: 50%;
-    }
+nav.menu-principal ul {
+  width: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px;
+}
 
-    div.call-to-action{
-        flex: 1 1 40%;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-end;
-        padding: 50px;
-    }
+nav.menu-principal ul li {
+  list-style: none;
+  flex: 1 1 auto;
+}
 
-    div.call-to-action h1{
-        font-size: 7.5rem;
-        text-align: right;
-    }
+nav.menu-principal ul li a {
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    div.call-to-action span{
-        font-size: 2.5rem;
-        text-align: right;
-        color: orange;
-    }
+nav.menu-principal ul li a:hover {
+  text-decoration: underline overline gray;
+}
 
-    div.call-to-action .btn-menu{
-        background-color: orange;
-        color: white;
-        padding: 10px 20px;
-        margin: 30px;
-        text-decoration: none;
-        font-weight: 600;
-        border-radius: 3px;
-    }
+/* logo */
+div.logo {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-right: 50px;
+}
+
+div.logo img {
+  width: 40%;
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+div.imagen-sushi-inicio {
+  flex: 1 1 60%;
+}
+
+div.imagen-sushi-inicio img {
+  width: 100%;
+  min-width: 50%;
+}
+
+div.call-to-action {
+  flex: 1 1 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+div.call-to-action h1 {
+  font-size: 7.5rem;
+  text-align: right;
+}
+
+div.call-to-action span {
+  font-size: 2.5rem;
+  text-align: right;
+  color: orange;
+}
+
+div.call-to-action .btn-menu {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  margin: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 3px;
+}
 
 /* contact page */
 
-div.contact{
+div.contact {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+div.contact form {
+  width: 30%;
+}
+
+div.form-group {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 10px;
+}
+
+div.form-group input[type="text"],
+div.form-group input[type="mail"] {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 30px;
+}
+
+div.form-group textarea {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.btn-contacto {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  margin: 30px;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+/* MEDIA QUERIES - MOBILE*/
+
+@media (max-width: 576px) {
+  /* CONTENIDO PRINCIPAL */
+  .container {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    margin-top: 50px;
-}
-
-div.contact form{
-    width: 30%;
-}
-
-div.form-group{
+    align-items: flex-start;
+  }
+  main {
     display: flex;
-    flex-flow: column nowrap;
-    margin-bottom: 10px;
+    flex-flow: column wrap;
+  }
+  /* LOGO */
+  div.logo {
+    padding-right: 0px;
+  }
+
+  div.logo img {
+    width: 100%;
+  }
+  /* MENU DE NAVEGACION */
+  nav.menu-principal {
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+  /* h1 & span */
+  div.call-to-action {
+    padding: 10px 20px 50px 20px;
+  }
+  div.call-to-action h1 {
+    font-size: 4.5rem;
+  }
+
+  div.call-to-action span {
+    font-size: 1.5rem;
+  }
+
+  div.call-to-action p {
+    text-align: right;
+    font-size: 16px;
+  }
+  /* BOTÓN QUE LLAMA A LA ACCIÓN */
+  div.call-to-action .btn-menu {
+    margin: 30px 0px;
+  }
+  /* __________________________________ */
+  /* CONTACT HTML */
+  div.contact form {
+    width: 80%;
+    margin-left: 3.5rem;
+  }
 }
 
-div.form-group input[type="text"], div.form-group input[type="mail"]{
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: 30px;
+/* MEDIA QUERIES - TABLETS */
+@media (min-width: 577px) and (max-width: 768px) {
+  nav.menu-principal {
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+  div.logo img {
+    width: 80%;
+  }
+  div.call-to-action {
+    padding: 50px 30px;
+    flex-flow: column wrap;
+  }
+  /* h1 & span */
+  div.call-to-action h1 {
+    font-size: 4.5rem;
+  }
+
+  div.call-to-action span {
+    font-size: 1.5rem;
+  }
+
+  div.call-to-action p {
+    text-align: right;
+  }
+  /* BOTÓN QUE LLAMA A LA ACCIÓN */
+  div.call-to-action .btn-menu {
+    margin: 30px 0px;
+  }
+  /* __________________________________ */
+  /* CONTACT HTML */
+  div.contact form {
+    width: 50%;
+  }
 }
-
-div.form-group textarea{
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-
-.btn-contacto{
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    margin: 30px;
-    font-weight: 600;
-    border-radius: 3px; 
-}
-
-
